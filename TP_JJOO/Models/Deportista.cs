@@ -1,0 +1,13 @@
+namespace TP_JJOO.Models;
+
+public class Deportista
+{
+    public string Nombre { get; set; }
+    public string Apellido{ get; set; }
+    public DateTime FechaNacimiento { get; set; }
+    public string Foto { get; set; }
+    public int IdPais { get; set; }
+    public int IdDeporte { get; set; }
+    public Deportista(){
+    }
+}
