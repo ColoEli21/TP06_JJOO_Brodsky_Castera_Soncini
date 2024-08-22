@@ -18,8 +18,40 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = z:\TP06_JJOO_Brodsky_Castera_Soncini\TP_JJOO
 build_property._RazorSourceGeneratorDebug = 
 
+[z:/TP06_JJOO_Brodsky_Castera_Soncini/TP_JJOO/Views/Home/AgregarDeportista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZ3JlZ2FyRGVwb3J0aXN0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/TP06_JJOO_Brodsky_Castera_Soncini/TP_JJOO/Views/Home/Creditos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVkaXRvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/TP06_JJOO_Brodsky_Castera_Soncini/TP_JJOO/Views/Home/Deportes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXBvcnRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/TP06_JJOO_Brodsky_Castera_Soncini/TP_JJOO/Views/Home/DetalleDeporte.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhbGxlRGVwb3J0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/TP06_JJOO_Brodsky_Castera_Soncini/TP_JJOO/Views/Home/DetalleDeportista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhbGxlRGVwb3J0aXN0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/TP06_JJOO_Brodsky_Castera_Soncini/TP_JJOO/Views/Home/DetallePais.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhbGxlUGFpcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/TP06_JJOO_Brodsky_Castera_Soncini/TP_JJOO/Views/Home/Historia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIaXN0b3JpYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [z:/TP06_JJOO_Brodsky_Castera_Soncini/TP_JJOO/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/TP06_JJOO_Brodsky_Castera_Soncini/TP_JJOO/Views/Home/Paises.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYWlzZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [z:/TP06_JJOO_Brodsky_Castera_Soncini/TP_JJOO/Views/Shared/_Layout.cshtml]

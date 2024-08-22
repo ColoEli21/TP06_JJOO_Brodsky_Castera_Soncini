@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Deportes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Lista de Deportes</h1>
+        <div class="row">
+            @foreach (Deporte deporte in ViewBag.Deportes)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@deporte.Nombre</h5>
+                            <img src="@deporte.Foto" alt="Aereo">
+                            <a href='@Url.Action("VerDetalleDeporte", "Home", new { IdDeporte = deporte.IdDeporte })' class="btn btn-primary">Ver Detalle</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

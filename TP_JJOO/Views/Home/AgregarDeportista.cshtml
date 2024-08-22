@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Deportista</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Agregar Deportista</h1>
+        <form action='@Url.Action("GuardarDeportista", "Home")' method="post">
+            <div class="form-group">
+                <label for="Nombre">Nombre</label>
+                <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="Apellido">Apellido</label>
+                <input type="text" class="form-control" id="Apellido" name="Apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="FechaNacimiento">FechaNacimiento</label>
+                <input type="date" class="form-control" id="FechaNacimiento" name="FechaNacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="Foto">URL de Imagen</label>
+                <input type="text" class="form-control" id="Foto" name="Foto" placeholder="https://ejemplo.com/imagen.jpg" required>
+            </div>
+            <div class="form-group">
+                <label for="IdDeporte">Deporte</label>
+                <select class="form-control" id="IdDeporte" name="IdDeporte" required>
+                    <option value="">Seleccione un deporte</option>
+                    @foreach (var deporte in ViewBag.Deportes)
+                    {
+                        <option value="@deporte.IdDeporte">@deporte.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="IdPais">País</label>
+                <select class="form-control" id="IdPais" name="IdPais" required>
+                    <option value="">Seleccione un país</option>
+                    @foreach (var pais in ViewBag.Paises)
+                    {
+                        <option value="@pais.IdPais">@pais.Nombre</option>
+                    }
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Deportista</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

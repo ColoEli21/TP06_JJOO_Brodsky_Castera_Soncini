@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Paises</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Lista de Paises</h1>
+        <div class="row">
+            @foreach (Pais pais in ViewBag.Paises)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@pais.Nombre</h5>
+                            <img src=@pais.Bandera alt="Aereo">
+                            <h5 class="card-date">@pais.FechaFundacion</h5>
+                            <a href='@Url.Action("VerDetallePais", "Home", new { IdPais = pais.IdPais })' class="btn btn-primary">Ver Detalle</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

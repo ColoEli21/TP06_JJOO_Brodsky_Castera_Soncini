@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalles del Deportista</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>@ViewBag.Deportista.Nombre</h1>
+        <div class="card" style="width: 18rem;">
+            <img src="@ViewBag.Deportista.Foto" class="card-img-top" alt="@ViewBag.Deportista.Nombre">
+            <div class="card-body">
+                <h5 class="card-title">Información</h5>
+                <p class="card-text"><strong>Nombre:</strong> @ViewBag.Deportista.Nombre @ViewBag.Deportista.Apellido</p>
+                <p class="card-text"><strong>Edad:</strong> @ViewBag.Deportista.FechaNacimiento</p>
+
+                <a href='@Url.Action("VerDetalleDeporte", "Home", new { IdDeporte = ViewBag.Deportista.IdDeporte })' class="btn btn-primary">Ir al Deporte</a>
+                <a href='@Url.Action("VerDetallePais", "Home", new { IdPais = ViewBag.Deportista.IdPais })' class="btn btn-secondary">Ir al País</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

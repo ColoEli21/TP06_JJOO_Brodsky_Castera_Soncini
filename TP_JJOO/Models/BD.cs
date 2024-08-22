@@ -24,7 +24,7 @@ public static class BD
     {
         Deporte MiDeporte = null;
         using(SqlConnection conn = new SqlConnection(_ConnectionString)){
-            string sql="SELECT FROM Deportes WHERE IdDeporte = @id";
+            string sql="SELECT * FROM Deportes WHERE IdDeporte = @id";
             MiDeporte = conn.QueryFirstOrDefault<Deporte>(sql, new{id = idDeporte});
         }
         return MiDeporte;
@@ -33,7 +33,7 @@ public static class BD
     {
         Pais MiPais = null;
         using(SqlConnection conn = new SqlConnection(_ConnectionString)){
-            string sql="SELECT FROM Paises WHERE IdPais = @id";
+            string sql="SELECT * FROM Paises WHERE IdPais = @id";
             MiPais = conn.QueryFirstOrDefault<Pais>(sql, new{id = idPais});
         }
         return MiPais;
@@ -42,7 +42,7 @@ public static class BD
     {
         Deportista MiDeportista = null;
         using(SqlConnection conn = new SqlConnection(_ConnectionString)){
-            string sql="SELECT FROM Deportistas WHERE IdDeportista = @id";
+            string sql="SELECT * FROM Deportistas d WHERE d.IdDeportista = @id";
             MiDeportista = conn.QueryFirstOrDefault<Deportista>(sql, new{id = idDeportista});
         }
         return MiDeportista;
@@ -56,11 +56,20 @@ public static class BD
         }
         return ListaPaises;
     }
-    public static List<Deportista> ListarDeportistas(int idDeporte)
+    public static List<Deporte> ListarDeporte()
+    {
+        List<Deporte> ListaDeportes = new List<Deporte>();
+        using(SqlConnection conn = new SqlConnection(_ConnectionString)){
+            string sql="SELECT * FROM Deportes";
+            ListaDeportes = conn.Query<Deporte>(sql).ToList();
+        }
+        return ListaDeportes;
+    }
+    public static List<Deportista> ListarDeportistas1(int idDeporte)
     {
         List<Deportista> ListaDeportistas = new List<Deportista>();
         using(SqlConnection conn = new SqlConnection(_ConnectionString)){
-            string sql="SELECT FROM Deportistas WHERE IdDeporte = @id";
+            string sql="SELECT * FROM Deportistas WHERE IdDeporte = @id";
             ListaDeportistas = conn.Query<Deportista>(sql, new{id = idDeporte}).ToList();
         }
         return ListaDeportistas;
@@ -69,7 +78,7 @@ public static class BD
     {
         List<Deportista> ListaDeportistas = new List<Deportista>();
         using(SqlConnection conn = new SqlConnection(_ConnectionString)){
-            string sql="SELECT FROM Deportistas WHERE IdPais = @id";
+            string sql="SELECT * FROM Deportistas WHERE IdPais = @id";
             ListaDeportistas = conn.Query<Deportista>(sql, new{id = idPais}).ToList();
         }
         return ListaDeportistas;
